@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>16-dars</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
 <body>
@@ -34,20 +35,36 @@
                     <div class="content__title">
                         <h2>Sign up for the course and get free 7 days</h2>
                     </div>
-                    <form action="https://echo.htmlacademy.ru/courses" method="post">
-                        <input class="content__input" type="text" name="user__name" aria-label="User name"
-                            placeholder="First name" value="Anna" required>
-                        <input class="content__input" type="text" name="user__lastname" aria-label="Last name"
-                            placeholder="Last name" required>
-                        <input class="content__input" type="email" name="user__email" aria-label="User email"
-                            placeholder="Email Address" required>
-                        <input class="content__input" type="password" name="user__password" aria-label="User password"
-                            placeholder="Password">
+
+                    <form action="https://echo.htmlacademy.ru/courses" method="post" autocomplete="off">
+                        <label>
+                            <input class="content__input" type="text" minlength="1" name="user__name"
+                                placeholder="First name" required>
+                            <span class="input-span">First Name cannot be empty</span>
+                        </label>
+
+                        <label>
+                            <input class="content__input" type="text" minlength="1" name="user__lastname"
+                                placeholder="Last name" required>
+                            <span class="input-span">Last Name cannot be empty</span>
+                        </label>
+
+                        <label>
+                            <input class="content__input" type="email" name="user__email" placeholder="Email Address"
+                                required>
+                            <span class="input-span">Looks like this is not an email</span>
+                        </label>
+
+                        <label>
+                            <input class="content__input" type="password" min="5" name="user__password"
+                                placeholder="Password" required>
+                            <span class="input-span">Password cannot be empty</span>
+                        </label>
 
                         <div class="content__box-second">
                             <button class="content__button" type="submit">Claim your free trial</button>
                             <p class="content__desc">By clicking the button, you are agreeing to our <span
-                                    style="font-weight: 500; text-decoration: underline; color: red;">Terms and
+                                    style="font-weight: 500; text-decoration: underline; color: red">Terms and
                                     Services</span></p>
                         </div>
                     </form>
