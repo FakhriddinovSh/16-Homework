@@ -212,23 +212,12 @@ body{
     opacity: 0;
 }
 
-.content__input:invalid{
-    border-bottom: 2px solid #F03535;
-}
-.content__input:invalid::placeholder{
-    color: #F03535;
-}
-
-.content__input:invalid ~ .input-span{
-    opacity: 1;
-}
-
-
-/* .content__input:not(:placeholder-shown):not(:focus):invalid{
+.content__input:not(:placeholder-shown):not(:focus):invalid{
     border-bottom: 2px solid #F03535;
     color: #F03535;
 }
 
-.content__input:not(:placeholder-shown):not(:focus):invalid  ~ .input-span{
-    opacity: 1;
-} */
+.content__input:not(:placeholder-shown):not(:focus):valid{
+    border-bottom: 2px solid green;
+    color: green;
+}
